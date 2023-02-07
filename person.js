@@ -40,7 +40,4 @@ class persona {
     }
 
 }
-
-
-
 module.exports = {persona};

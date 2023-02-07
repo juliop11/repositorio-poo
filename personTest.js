@@ -7,3 +7,4 @@ console.log(juan.calcularIMC());
 console.log(juan.calcularEdad(2023));
 console.log(juan.printAll());
 juan.printHobbies();
+
