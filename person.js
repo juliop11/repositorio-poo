@@ -5,7 +5,7 @@
 //• Sube todos los cambios a tu rama “dia1”
 
 
-class persona {
+class Persona {
     constructor(altura, peso) {
         this.edad
         this.altura = altura
@@ -40,4 +40,4 @@ class persona {
     }
 
 }
-module.exports = {persona};
+module.exports = {Persona};

@@ -1,6 +1,6 @@
-let {persona} = require("./person");
+let {Persona} = require("./person");
 
-let juan = new persona(1.84, 95);
+let juan = new Persona(1.84, 95);
 juan.edad = 1987;
 juan.hobbies = ["coches", "playa"]
 console.log(juan.calcularIMC());
