@@ -25,9 +25,9 @@ class Persona {
     }
 
     printAll() {
-        console.log("Edad- " + this.edad);
-        console.log("Altura- " + this.altura);
-        console.log("Peso- " + this.peso);
+        for (let propiedad in this) {
+            console.log(propiedad + "-" + this[propiedad]);
+        }
     }
 
     printHobbies() {
@@ -38,6 +38,7 @@ class Persona {
         }
 
     }
-
+    
 }
-module.exports = {Persona};
+
+module.exports = { Persona };

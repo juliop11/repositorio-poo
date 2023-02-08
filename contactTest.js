@@ -14,5 +14,7 @@ let agenda = new Contacts()
 agenda.contactos.push(jose)
 agenda.contactos.push(pedro)
 console.log(agenda.contactos);
-console.log('print person *******************************');
+console.log('print person ******************************');
 agenda.printPerson();
+
+
