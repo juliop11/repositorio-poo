@@ -8,9 +8,15 @@
 // - k: number. Máximo valor de los elementos del vector.
 // Este constructor tiene que crear el atributo elements formado por n números aleatorios entre 0 y k.
 
-class Vector {
+//print(). Imprime por consola el vector.
+//add(v1:Vector):Vector. Realiza la suma de elements con v1.
+//subs(v1:Vector):Vector. Realiza la resta de elements con v1.
+//mult(v1:Vector):Vector. Realiza el producto de elements y v1.
+//multNumber(n:number):Vector. Realiza el producto entre elements y el número n.
 
-    private elements: Number[];
+export class Vector {
+
+    private elements: number[];
 
     constructor(n: number, k: number) {
 
@@ -26,20 +32,58 @@ class Vector {
         return this.elements;
     }
 
-    // public add(v1: number[]): number {
+    public add(v1: number[]): Vector {
 
-    //     let total = 0;
-    //     let array1 = [];
+        let total: Vector = new Vector(0, 0);
 
-    //     for (let i = 0; i < v1.length; i++) {
+        for (let i = 0; i < v1.length; i++) {
 
-    //         total[i] = array1[i] + v1[i]
-    //         return total;
-    //     }
-    // }
+            if (this.elements.length == v1.length) {
+
+                total.elements.push(this.elements[i] + v1[i])
+            }
+        }
+        return total;
+    }
+
+    public subs(v1: number[]): Vector {
+
+        let total1: Vector = new Vector(0, 0);
+
+        for (let i = 0; i < v1.length; i++) {
+
+            if (this.elements.length == v1.length) {
+
+                total1.elements.push(this.elements[i] - v1[i])
+            }
+        }
+        return total1;
+    }
+
+    public mult(v1: number[]): Vector {
+
+        let total2: Vector = new Vector(0, 0);
+
+        for (let i = 0; i < v1.length; i++) {
+
+            if (this.elements.length == v1.length) {
+
+                total2.elements.push(this.elements[i] * v1[i])
+            }
+        }
+        return total2;
+    }
+
+    public multNumber(n: number): Vector {
+
+        let array1: Vector = new Vector(0, 0);
+
+
+        for (let i = 0; i < this.elements.length; i++) {
+
+            array1[i] = n * this.elements[i];
+
+        }
+        return array1;
+    }
 }
-let array: Vector = new Vector(5, 20);
- console.log(array.print());
-// console.log(array.add([2, 3, 4, 5, 6]));
-
-
