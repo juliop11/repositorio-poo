@@ -27,12 +27,13 @@ export class Vector {
             this.elements.push(Math.round(Math.random() * k))
         }
     }
+
     public print() {
 
         return this.elements;
     }
 
-    public add(v1: number[]): Vector {
+    public add(v1: number[]): number[] {
 
         let total: Vector = new Vector(0, 0);
 
@@ -43,10 +44,11 @@ export class Vector {
                 total.elements.push(this.elements[i] + v1[i])
             }
         }
-        return total;
+        return total.elements;
     }
 
-    public subs(v1: number[]): Vector {
+    
+    public subs(v1:number[]): number[] {
 
         let total1: Vector = new Vector(0, 0);
 
@@ -57,10 +59,10 @@ export class Vector {
                 total1.elements.push(this.elements[i] - v1[i])
             }
         }
-        return total1;
+        return total1.elements;
     }
 
-    public mult(v1: number[]): Vector {
+    public mult(v1: number[]): number[] {
 
         let total2: Vector = new Vector(0, 0);
 
@@ -71,7 +73,7 @@ export class Vector {
                 total2.elements.push(this.elements[i] * v1[i])
             }
         }
-        return total2;
+        return total2.elements;
     }
 
     public multNumber(n: number): Vector {
@@ -81,7 +83,7 @@ export class Vector {
 
         for (let i = 0; i < this.elements.length; i++) {
 
-            array1[i] = n * this.elements[i];
+            array1[i] = this.elements[i] * n;
 
         }
         return array1;
